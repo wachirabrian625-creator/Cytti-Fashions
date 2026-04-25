@@ -1,22 +1,18 @@
-# Header Mobile Fix — DONE
+# Task Plan
 
-## Goal
-Make "Cytti" stay big, stack "Fashions" below it smaller, and show nav links on mobile screens.
+## Steps
+- [x] 1. Gather information from all HTML files
+- [x] 2. Create plan and get user approval
+- [x] 3. Update email to wachirabrian625@gmail.com in all HTML files
+- [x] 4. Replace header "WhatsApp Us" text with WhatsApp icon only in all HTML files
+- [x] 5. Verify changes
 
-## Files updated
-- [x] index.html
-- [x] collections.html
-- [x] contact.html
-- [x] about.html
-- [x] visit.html
-- [x] visit (1).html
-- [x] home.html
-
-## Changes made
-1. HTML: `<em>Fashions</em>` → `<em class="brand-sub">Fashions</em>` in all files
-2. CSS: Added mobile-specific styles (`@media(max-width:767px)`) so:
-   - Brand stacks vertically with "Fashions" smaller below "Cytti"
-   - Nav links are visible, compact, centered and wrap on small screens
-   - WhatsApp button shrinks to fit
-3. Desktop layout (`@media(min-width:768px)`) stays exactly the same
+## Files Edited
+- index.html
+- home.html
+- collections.html
+- contact.html
+- about.html
+- visit.html
+- visit (1).html
 
