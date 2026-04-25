@@ -31,14 +31,22 @@
   /* ===== HEADER ===== */
   header.site{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:rgba(251,246,238,.85);border-bottom:1px solid var(--border)}
   header.site .row{display:flex;align-items:center;justify-content:space-between;height:72px}
-  .brand{font-family:var(--font-display);font-size:1.6rem;font-weight:700}
+  .brand{font-family:var(--font-display);font-size:1.6rem;font-weight:700;display:flex;flex-direction:column;line-height:1}
   .brand em{color:var(--clay)}
+  .brand .brand-sub{font-size:.85rem;font-style:italic;margin-top:2px}
   nav.main{display:none;gap:32px;font-size:.9rem;font-weight:500}
   nav.main a:hover{color:var(--clay)}
   .cta-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:999px;background:var(--gradient-sunset);color:#fff;font-size:.85rem;font-weight:600;box-shadow:var(--shadow-soft);transition:transform .2s}
   .cta-btn:hover{transform:scale(1.05)}
   .ghost-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:999px;border:1px solid var(--border);background:var(--card);font-size:.85rem;font-weight:600;transition:background .2s}
   .ghost-btn:hover{background:#f1e7d2}
+  @media(max-width:767px){
+    header.site .row{flex-wrap:wrap;height:auto;padding:8px 0;gap:4px 0}
+    .brand{font-size:1.4rem}
+    .brand .brand-sub{font-size:.75rem}
+    nav.main{display:flex;gap:10px;font-size:.72rem;width:100%;justify-content:center;flex-wrap:wrap;padding:4px 0}
+    .cta-btn{padding:6px 12px;font-size:.72rem}
+  }
   @media(min-width:768px){nav.main{display:flex}}
 
   /* ===== HERO ===== */
@@ -140,7 +148,7 @@
 <!-- HEADER -->
 <header class="site">
   <div class="container row">
-    <a href="index.html" class="brand">Cytti <em>Fashions</em></a>
+    <a href="index.html" class="brand">Cytti <em class="brand-sub">Fashions</em></a>
     <nav class="main">
       <a href="index.html">Home</a>
       <a href="collections.html">Collections</a>

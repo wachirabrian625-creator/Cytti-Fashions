@@ -1,35 +1,22 @@
-# WhatsApp Image Replacement TODO
+# Header Mobile Fix — DONE
 
-## Plan: Replace 💬 emoji / WhatsApp indicators with `photos/whatsApp.png` image across all HTML files
+## Goal
+Make "Cytti" stay big, stack "Fashions" below it smaller, and show nav links on mobile screens.
 
-### Files to Edit
-- [ ] index.html
-- [ ] home.html
-- [ ] collections.html
-- [ ] about.html
-- [ ] contact.html
-- [ ] visit.html
-- [ ] visit (1).html
+## Files updated
+- [x] index.html
+- [x] collections.html
+- [x] contact.html
+- [x] about.html
+- [x] visit.html
+- [x] visit (1).html
+- [x] home.html
 
-### Changes Per File
-1. **Header CTA button**: Keep "WhatsApp Us" text, add WhatsApp icon image alongside
-2. **Footer social link**: Replace 💬 emoji with WhatsApp image icon
-3. **Floating action button (wa-float)**: Replace 💬 emoji with WhatsApp image icon
-4. **Inline inquiry links**: Replace 💬 emoji with WhatsApp image icon + keep text
-5. **Contact page channel card**: Replace 💬 emoji with WhatsApp image icon
-
-### CSS Additions
-- Add `.wa-icon` class for consistent image sizing in different contexts
-- Add `.wa-float img` sizing for floating button
-
-### Progress
-- [x] Step 1: Add CSS rules for WhatsApp image icons
-- [x] Step 2: Update index.html
-- [ ] Step 3: Update home.html
-- [ ] Step 4: Update collections.html
-- [ ] Step 5: Update about.html
-- [ ] Step 6: Update contact.html
-- [ ] Step 7: Update visit.html
-- [ ] Step 8: Update visit (1).html
-- [ ] Step 9: Verify all changes render correctly
+## Changes made
+1. HTML: `<em>Fashions</em>` → `<em class="brand-sub">Fashions</em>` in all files
+2. CSS: Added mobile-specific styles (`@media(max-width:767px)`) so:
+   - Brand stacks vertically with "Fashions" smaller below "Cytti"
+   - Nav links are visible, compact, centered and wrap on small screens
+   - WhatsApp button shrinks to fit
+3. Desktop layout (`@media(min-width:768px)`) stays exactly the same
 
