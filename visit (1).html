@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Visit Us — Cytti Fashions Store, Nairobi</title>
+<meta name="description" content="Find Cytti Fashions Store in Digit Shopping Mall, Shop F20, Moi Avenue, Nairobi." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbf6ee; --fg:#2b231c; --card:#fffdf8; --muted:#7a6f63; --border:#e6dccd;
+    --clay:#b85b3a; --mustard:#e6b94a; --ink:#221c17; --cream:#f8f1e2;
+    --gradient-sunset:linear-gradient(135deg,#b85b3a 0%,#e07a3c 50%,#e6b94a 100%);
+    --gradient-warm:linear-gradient(180deg,#fbf6ee 0%,#f1e7d2 100%);
+    --shadow-soft:0 10px 30px -10px rgba(184,91,58,.25);
+    --shadow-bold:0 20px 60px -20px rgba(34,28,23,.35);
+    --font-display:"Playfair Display",Georgia,serif;
+    --font-body:"Inter",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;border-color:var(--border)}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--fg);font-family:var(--font-body);line-height:1.5;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:var(--font-display);letter-spacing:-.02em;font-weight:700}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  em{font-style:italic;color:var(--clay)}
+  .container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+  /* ===== HEADER ===== */
+  header.site{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:rgba(251,246,238,.85);border-bottom:1px solid var(--border)}
+  header.site .row{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{font-family:var(--font-display);font-size:1.6rem;font-weight:700}
+  .brand em{color:var(--clay)}
+  nav.main{display:none;gap:32px;font-size:.9rem;font-weight:500}
+  nav.main a:hover{color:var(--clay)}
+  .cta-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:999px;background:var(--gradient-sunset);color:#fff;font-size:.85rem;font-weight:600;box-shadow:var(--shadow-soft);transition:transform .2s}
+  .cta-btn:hover{transform:scale(1.05)}
+  .ghost-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:999px;border:1px solid var(--border);background:var(--card);font-size:.85rem;font-weight:600;transition:background .2s}
+  .ghost-btn:hover{background:#f1e7d2}
+  @media(min-width:768px){nav.main{display:flex}}
+
+  /* ===== HERO ===== */
+  .hero{position:relative;overflow:hidden}
+  .blob{position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;animation:blob 14s ease-in-out infinite}
+  .blob.b1{top:-120px;left:-120px;width:420px;height:420px;background:var(--gradient-sunset);opacity:.4}
+  .blob.b2{top:160px;right:-160px;width:360px;height:360px;background:var(--mustard);opacity:.3;animation-delay:-4s}
+  .hero-grid{display:grid;gap:40px;align-items:center;padding:64px 0}
+  @media(min-width:768px){.hero-grid{grid-template-columns:1fr 1fr;padding:96px 0}}
+  .pill{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:999px;border:1px solid var(--border);background:var(--card);font-size:.7rem;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:var(--muted)}
+  .sparkle{display:inline-block;animation:float 6s ease-in-out infinite}
+  .hero h1{font-size:3rem;line-height:1.05;margin-top:24px}
+  @media(min-width:768px){.hero h1{font-size:4.5rem}}
+  .hero p.lead{margin-top:24px;max-width:480px;font-size:1.1rem;color:var(--muted)}
+  .btn-row{margin-top:32px;display:flex;flex-wrap:wrap;gap:16px}
+  .stats{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:420px}
+  .stats dt{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--clay)}
+  .stats dd{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-top:4px}
+  .hero-img-wrap{position:relative;animation:fadeUp .8s .15s both}
+  .hero-img-wrap::before{content:"";position:absolute;inset:-16px;border-radius:24px;background:var(--gradient-sunset);opacity:.25;filter:blur(50px);z-index:-1;background-size:200% 200%;animation:gradient 8s ease-in-out infinite}
+  .hero-img{aspect-ratio:4/5;width:100%;border-radius:24px;object-fit:cover;box-shadow:var(--shadow-bold);animation:float 6s ease-in-out infinite}
+  .badge-card{display:none;position:absolute;bottom:-24px;left:-24px;padding:16px;border-radius:16px;background:var(--card);border:1px solid var(--border);box-shadow:0 20px 40px -10px rgba(0,0,0,.15)}
+  @media(min-width:768px){.badge-card{display:block}}
+  .badge-card .row{display:flex;align-items:center;gap:12px}
+  .heart-circle{width:40px;height:40px;border-radius:50%;background:var(--mustard);display:flex;align-items:center;justify-content:center;animation:pulseRing 2s ease-out infinite}
+
+  /* ===== MARQUEE ===== */
+  .marquee{overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:16px 0;background:var(--ink);color:var(--cream)}
+  .marquee-track{display:flex;gap:48px;width:max-content;white-space:nowrap;font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.3em;animation:marquee 40s linear infinite}
+  .marquee-track .gold{color:var(--mustard)}
+
+  /* ===== COLLECTIONS ===== */
+  .section{padding:80px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--gradient-warm)}
+  .section .head{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px}
+  .eyebrow{font-size:.7rem;text-transform:uppercase;letter-spacing:.2em;color:var(--muted)}
+  .section h2{font-size:2.25rem;margin-top:8px}
+  @media(min-width:768px){.section h2{font-size:3rem}}
+  .grid-3{margin-top:48px;display:grid;gap:24px;grid-template-columns:1fr}
+  @media(min-width:768px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+  .card{overflow:hidden;border-radius:16px;background:var(--card);box-shadow:0 4px 12px rgba(0,0,0,.06);transition:transform .5s,box-shadow .5s}
+  .card:hover{transform:translateY(-8px);box-shadow:0 24px 48px -12px rgba(0,0,0,.18)}
+  .card .img-wrap{aspect-ratio:4/5;overflow:hidden}
+  .card img{height:100%;width:100%;object-fit:cover;transition:transform .7s}
+  .card:hover img{transform:scale(1.05)}
+  .card .body{padding:24px}
+  .card h3{font-size:1.5rem}
+  .card p{margin-top:4px;font-size:.9rem;color:var(--muted)}
+
+  /* ===== VISIT CTA ===== */
+  .visit-cta{padding:80px 0}
+  .visit-box{padding:48px;border-radius:24px;background:var(--ink);color:var(--cream);overflow:hidden}
+  @media(min-width:768px){.visit-box{padding:64px}}
+  .visit-grid{display:grid;gap:32px;align-items:center}
+  @media(min-width:768px){.visit-grid{grid-template-columns:1fr 1fr}}
+  .pin{width:40px;height:40px;color:var(--mustard)}
+  .visit-box h2{font-size:2.25rem;margin-top:16px}
+  @media(min-width:768px){.visit-box h2{font-size:3rem}}
+  .visit-box p{margin-top:16px;opacity:.8}
+  .visit-actions{display:flex;flex-wrap:wrap;gap:16px}
+  @media(min-width:768px){.visit-actions{justify-content:flex-end}}
+  .btn-white{padding:12px 24px;border-radius:999px;background:#fff;color:var(--fg);font-size:.85rem;font-weight:600;transition:transform .2s}
+  .btn-white:hover{transform:scale(1.05)}
+  .btn-outline-w{padding:12px 24px;border-radius:999px;border:1px solid rgba(255,255,255,.3);color:#fff;font-size:.85rem;font-weight:600;transition:background .2s}
+  .btn-outline-w:hover{background:rgba(255,255,255,.1)}
+
+  /* ===== FOOTER ===== */
+  footer.site{background:var(--ink);color:var(--cream);border-top:1px solid rgba(255,255,255,.1)}
+  .foot-grid{display:grid;gap:40px;padding:64px 0;grid-template-columns:1fr}
+  @media(min-width:768px){.foot-grid{grid-template-columns:2fr 1fr 1fr}}
+  footer h3{font-size:1.875rem}
+  footer .tag{margin-top:12px;max-width:380px;font-size:.875rem;opacity:.7}
+  .socials{margin-top:24px;display:flex;gap:12px}
+  .socials a{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;transition:background .2s}
+  .socials a:hover{background:rgba(255,255,255,.1)}
+  .foot-h{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.2em;opacity:.6}
+  footer ul{margin-top:16px;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:.875rem}
+  footer ul li{opacity:.8}
+  footer ul li a:hover{opacity:1}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding:24px;text-align:center;font-size:.75rem;opacity:.6}
+
+  /* ===== WHATSAPP FLOAT ===== */
+  .wa-float{position:fixed;bottom:24px;right:24px;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 8px 24px rgba(37,211,102,.4);z-index:60;animation:pulseRing 2s ease-out infinite}
+  .wa-float:hover{transform:scale(1.1)}
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes blob{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(40px,-30px) scale(1.1)}66%{transform:translate(-30px,25px) scale(.95)}}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+  @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+  @keyframes fadeUp{0%{opacity:0;transform:translateY(24px)}100%{opacity:1;transform:translateY(0)}}
+  @keyframes pulseRing{0%{box-shadow:0 0 0 0 rgba(230,185,74,.6)}70%{box-shadow:0 0 0 18px rgba(230,185,74,0)}100%{box-shadow:0 0 0 0 rgba(230,185,74,0)}}
+  @keyframes gradient{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .9s ease,transform .9s ease}
+  .reveal.in{opacity:1;transform:translateY(0)}
+  @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+
+    <style>
+      .page-hero{position:relative;overflow:hidden;border-bottom:1px solid var(--border);background:var(--gradient-warm);padding:80px 0;text-align:center}
+      .page-hero h1{font-size:3rem;margin-top:12px}
+      @media(min-width:768px){.page-hero h1{font-size:4rem}}
+      .page-hero p.lead{margin:20px auto 0;max-width:640px;color:var(--muted)}
+      .grid-2{display:grid;gap:48px;align-items:center;grid-template-columns:1fr}
+      @media(min-width:768px){.grid-2{grid-template-columns:1fr 1fr}}
+      .grid-4{display:grid;gap:16px;grid-template-columns:repeat(2,1fr);margin-top:40px}
+      @media(min-width:768px){.grid-4{grid-template-columns:repeat(4,1fr)}}
+      .square{aspect-ratio:1/1;overflow:hidden;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+      .square img{height:100%;width:100%;object-fit:cover;transition:transform .7s}
+      .square:hover img{transform:scale(1.1)}
+      .info-card{padding:24px;border-radius:16px;background:var(--card);box-shadow:0 4px 12px rgba(0,0,0,.06);transition:transform .5s,box-shadow .5s}
+      .info-card:hover{transform:translateY(-4px);box-shadow:0 16px 32px -8px rgba(0,0,0,.15)}
+      .icon-circle{width:48px;height:48px;border-radius:50%;background:var(--mustard);display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+      .channel{display:block;padding:32px;border-radius:16px;border:1px solid var(--border);background:var(--card);transition:transform .5s,box-shadow .5s}
+      .channel:hover{transform:translateY(-8px);box-shadow:0 24px 48px -12px rgba(0,0,0,.15)}
+      .channel.primary{background:var(--gradient-sunset);color:#fff;border:none}
+      .map-wrap{overflow:hidden;border-radius:16px;box-shadow:0 12px 32px rgba(0,0,0,.15);min-height:500px}
+      .map-wrap iframe{width:100%;height:500px;border:0}
+      .visit-grid{display:grid;gap:40px;grid-template-columns:1fr}
+      @media(min-width:1024px){.visit-grid{grid-template-columns:1fr 2fr}}
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site">
+  <div class="container row">
+    <a href="index.html" class="brand">Cytti <em>Fashions</em></a>
+    <nav class="main">
+      <a href="collections.html">Collections</a>
+      <a href="about.html">About</a>
+      <a href="visit.html">Visit</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="https://wa.me/254759757485" class="cta-btn">WhatsApp Us</a>
+  </div>
+</header>
+
+<main>
+
+  <section style="padding:64px 0">
+    <div class="container">
+      <p class="eyebrow">Find us</p>
+      <h1 style="font-size:3rem;margin-top:8px">Visit the <em>store.</em></h1>
+
+      <div class="visit-grid" style="margin-top:48px">
+        <div style="display:flex;flex-direction:column;gap:24px">
+          <div class="info-card">
+            <div style="font-size:1.5rem;color:var(--clay)">📍</div>
+            <h2 style="margin-top:12px;font-size:1.25rem">Address</h2>
+            <p style="margin-top:8px;font-size:.875rem;color:var(--muted)">
+              Cytti Fashions Store<br>
+              Digit Shopping Mall<br>
+              Shop F20, Moi Avenue<br>
+              Nairobi, Kenya
+            </p>
+            <a href="https://maps.app.goo.gl/4ReC7N7pma3r9aTi7?g_st=ac" target="_blank" style="margin-top:16px;display:inline-block;font-size:.875rem;font-weight:600;color:var(--clay)">Open in Google Maps →</a>
+          </div>
+          <div class="info-card">
+            <div style="font-size:1.5rem;color:var(--clay)">⏰</div>
+            <h2 style="margin-top:12px;font-size:1.25rem">Hours</h2>
+            <p style="margin-top:8px;font-size:.875rem;color:var(--muted)">Monday – Sunday<br>8:00 AM – 8:00 PM</p>
+          </div>
+          <div class="info-card">
+            <div style="font-size:1.5rem;color:var(--clay)">📞</div>
+            <h2 style="margin-top:12px;font-size:1.25rem">Call Ahead</h2>
+            <a href="tel:+254759757485" style="margin-top:8px;display:block;font-size:.875rem;font-weight:600">0759 757 485 — Fibbie</a>
+          </div>
+        </div>
+
+        <div class="map-wrap">
+          <iframe title="Cytti Fashions Store location map"
+            src="https://www.google.com/maps?q=Digit+Shopping+Mall+Moi+Avenue+Nairobi&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site" id="contact">
+  <div class="container foot-grid">
+    <div>
+      <h3>Cytti Fashions</h3>
+      <p class="tag">Curated fashion store run by Fibbie Wanjiku. Quality you can trust, prices that respect you.</p>
+      <div class="socials">
+        <a href="https://wa.me/254759757485" aria-label="WhatsApp">💬</a>
+        <a href="https://www.instagram.com/cyttifashions" aria-label="Instagram">📷</a>
+        <a href="tel:+254759757485" aria-label="Call">📞</a>
+      </div>
+    </div>
+    <div>
+      <h4 class="foot-h">Explore</h4>
+      <ul>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="visit.html">Visit Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="foot-h">Find Us</h4>
+      <ul>
+        <li>📍 Digit Shopping Mall, Shop F20, Moi Avenue, Nairobi</li>
+        <li>📞 0759 757 485</li>
+        <li>✉️ hello@cyttifashions.co.ke</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">© <script>document.write(new Date().getFullYear())</script> Cytti Fashions Store · Nairobi, Kenya · Owner: Fibbie Wanjiku</div>
+</footer>
+
+<a href="https://wa.me/254759757485" class="wa-float" aria-label="Chat on WhatsApp">💬</a>
+
+<script>document.write(new Date().getFullYear())</script>
+</body>
+</html>
